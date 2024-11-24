@@ -34,10 +34,10 @@ resource "aws_lambda_function" "form_handler" {
 
   source_code_hash = data.archive_file.lambda.output_base64sha256
 
-  runtime = "nodejs18.x"
+  runtime = "python3.12"
   environment {
     variables = {
-      DYNAMODB_TABLE_NAME=aws_dynamodb_table.waitlist_table.name
+      DYNAMODB_TABLE_NAME = aws_dynamodb_table.waitlist_table.name
     }
   }
 }

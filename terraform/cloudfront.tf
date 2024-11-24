@@ -56,7 +56,7 @@ resource "random_integer" "website_oac_name" {
 }
 
 resource "aws_cloudfront_origin_access_control" "website_distribution_oac" {
-  name = "WebsiteOAC${random_integer.website_oac_name.result}"
+  name                              = "WebsiteOAC${random_integer.website_oac_name.result}"
   origin_access_control_origin_type = "s3"
   signing_behavior                  = "always"
   signing_protocol                  = "sigv4"
