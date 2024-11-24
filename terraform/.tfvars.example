@@ -1,0 +1,4 @@
+domain_name = "waitlist.example.com"
+route53_zone_name = "example.com"
+route53_a_record = "waitlist"
+route53_zone_id = "ABC123"
